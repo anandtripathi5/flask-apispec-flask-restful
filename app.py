@@ -43,7 +43,7 @@ class AwesomeAPI(MethodResource, Resource):
     @doc(description='My First GET Awesome API.', tags=['Awesome'])
     @use_kwargs(AwesomeRequestSchema, location=('json'))
     @marshal_with(AwesomeResponseSchema)  # marshalling
-    def post(self):
+    def post(self, **kwargs):
         '''
         Get method represents a GET API method
         '''
